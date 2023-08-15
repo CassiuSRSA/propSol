@@ -14,5 +14,3 @@ These are features that will be implemented over time:
 
 - Transaction history section
 - Password reset
--
-- Add admin section
