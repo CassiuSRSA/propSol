@@ -48,6 +48,11 @@ main {
   border-radius: 5px;
 }
 
+.btn:hover {
+  background-color: rgb(6, 61, 31);
+  cursor: pointer;
+}
+
 .btn-wrap {
   display: flex;
   justify-content: center;

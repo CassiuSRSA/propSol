@@ -119,8 +119,6 @@ router.post("/login", async (req, res) => {
     .collection("users")
     .findOne({ email: enteredEmail });
 
-  console.log(existingUser);
-
   if (!existingUser) {
     req.session.inputData = {
       hasError: true,
