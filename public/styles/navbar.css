@@ -8,7 +8,7 @@
 #navbar-list {
   display: flex;
   position: relative;
-  place-items: center;
+
   list-style: none;
   justify-content: center;
   align-content: center;
@@ -40,4 +40,10 @@
 
 .logout:hover {
   color: red;
+}
+
+@media only screen and (max-width: 600px) {
+  #navbar-list {
+    justify-content: flex-start;
+  }
 }
