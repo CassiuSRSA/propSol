@@ -1,8 +1,8 @@
-# The Blogger
+# Property Management Web App
 
 Welcome to the code for my property management web app.
 
-Live site: [The Blogger](https://propsol.onrender.com/) - Please allow a minute for the server to spin up
+Live site: [PropSol](https://propsol.onrender.com/) - Please allow a minute for the server to spin up
 
 ## Technologies Used
 
