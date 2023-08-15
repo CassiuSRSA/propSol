@@ -1,0 +1,30 @@
+.history {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.history h2 {
+  margin: 1rem 0;
+}
+
+.transaction-capture-list {
+  list-style: none;
+}
+
+.transaction-capture-item {
+  display: flex;
+}
+
+.transaction-capture-item p {
+  width: 8rem;
+  border: 1px solid #000;
+  text-align: center;
+  padding: 1rem;
+}
+
+.table-heading {
+  font-weight: bold;
+}

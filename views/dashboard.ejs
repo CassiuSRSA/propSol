@@ -1,0 +1,70 @@
+<%- include('includes/head.ejs', {title: 'Dashboard'}) %>
+  <link rel="stylesheet" href="/styles/dashboard.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+  </head>
+  <body>
+    <%- include('includes/header.ejs') %>
+    <main>
+    
+    <h1>Dashboard</h1>
+    
+    </main>
+    <hr>
+    <div class="graph-container">
+    <canvas id="income-expense" ></canvas>
+    <canvas id="trendline" ></canvas>
+  </div>
+    
+    
+  
+  <script>
+    
+    new Chart("income-expense", {
+      type: "bar",
+      data: {
+        labels: ["Income", "Expenses"],
+        datasets: [{
+          backgroundColor: ["green", "red" ,"blue","orange","brown", "pink"],
+          data: [<%= income %>, <%= expenses %>, 0]
+        }]
+      },
+      options: {
+        legend: {display: false},
+        title: {
+          display: true,
+          text: "Income vs Expenses"
+        }
+      }
+    });
+
+    
+
+new Chart("trendline", {
+  type: "line",
+  data: {
+    labels: [<%=trendlineData.months%>],
+    datasets: [{
+      label: "Income",
+      data: [ <%=trendlineData.income%> ],
+      borderColor: "green",
+      fill: false
+    },{
+      label: "Expenses",
+      data: [ <%=trendlineData.expenses%> ],
+      borderColor: "red",
+      fill: false
+    }]
+  },
+  options: {
+    legend: {display: true},
+    title: {
+          display: true,
+          text: "Income & Expense Trend"
+        }
+  }
+});
+
+    </script>
+    
+  </body>
+</html>

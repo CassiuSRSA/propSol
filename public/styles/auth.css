@@ -1,0 +1,26 @@
+.form-container {
+  box-shadow: 0px 0px 15px -7px rgba(0, 0, 0, 0.75);
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.form-container h1 {
+  text-align: center;
+  padding: 1rem;
+}
+
+.form-container form {
+  padding: 1rem;
+}
+
+input,
+select {
+  display: block;
+  margin: 0.5rem 0;
+  padding: 0.4rem;
+  width: 100%;
+}
+
+.form-end {
+  margin: 1rem;
+}

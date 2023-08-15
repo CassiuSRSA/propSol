@@ -1,0 +1,20 @@
+.admin-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+hr {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+form {
+  margin: 1rem 0;
+}
+
+input {
+  width: 100%;
+}

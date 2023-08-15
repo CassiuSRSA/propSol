@@ -1,0 +1,68 @@
+<%- include('includes/head.ejs', {title: 'Capture'}) %>
+  <link rel="stylesheet" href="/styles/capture.css">
+  </head>
+  <body>
+    <%- include('includes/header.ejs') %>
+
+    <main>
+      <h1>Capture New Expense</h1>
+      
+      <form class="expense-form" action="/capture" method="POST">
+        
+        <label for="date">Date</label>
+        <input type="date" name="date" id="date" max="<%= date %>" required />
+        <label for="transaction-type">Transaction Type</label>
+        <select name="transaction-type" id="transaction-type" required>
+          <option value="out">Out</option>
+          <option value="in">In</option>
+          <option value="transfer">Transfer</option>
+        </select>
+        <label for="category">Category</label>
+        <select name="category" id="category" required>
+          <% for (const category of categories) { %>
+            <option value="<%= category.htmlValue %>"><%= category.title %></option>
+            <% } %>
+          
+        </select>
+        <label for="paid-by">Paid By</label>
+        <select name="paid-by" id="paid-by" required>
+          <option value="manager">Site Manager</option>
+          <option value="Owner">Owner</option>
+          
+        </select>
+        <label for="amount">Amount</label>
+        <input type="number" name="amount" id="amount" step="0.01" required />
+        <label for="description">Description</label>
+        <input type="text" name="description" id="description" required />
+        <div class="btn-wrap">
+        <button class="btn capture-btn">Load Expense</button>
+        </div>
+      </form>
+    </main>
+    <section>
+      <div class="history">
+        <h2>Last 5 Captures</h2>
+        <ul class="transaction-capture-list">
+          
+          <li class="transaction-capture-item">
+            <p class="table-heading">Date</p>
+
+            <p class="table-heading">Amount</p>
+            <p class="table-heading">Description</p>
+          </li>
+          <% for (let transaction of transactions) {%>
+            <li class="transaction-capture-item">
+              <p class="table-heading"><%= transaction.date.toLocaleString("en-ZA", {year: "numeric",
+                month: "numeric",
+                day: "numeric",}) %></p>
+  
+              <p class="table-heading"><%= transaction.amount %></p>
+              <p class="table-heading"><%= transaction.description %></p>
+            </li>
+            <% } %>
+          
+        </ul>
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+:root {
+  --primary: rgb(32, 117, 70);
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  margin: 1.5rem 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.welcome-details {
+  max-width: 80%;
+
+  text-align: justify;
+  margin: 2rem 0;
+  line-height: 1.5;
+}
+
+.welcome-details .heading {
+  font-weight: bold;
+}
+
+.btn {
+  background-color: var(--primary);
+  color: #fff;
+  padding: 1rem;
+  font-weight: bold;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-delete {
+  background-color: rgb(255, 82, 82);
+}
+
+.btn-delete:hover {
+  background-color: rgb(255, 31, 31);
+}

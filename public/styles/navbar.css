@@ -1,0 +1,43 @@
+#navbar {
+  background: var(--primary);
+  color: rgb(255, 255, 255);
+  height: 5rem;
+  overflow: hidden;
+}
+
+#navbar-list {
+  display: flex;
+  position: relative;
+  place-items: center;
+  list-style: none;
+  justify-content: center;
+  align-content: center;
+  height: 100%;
+}
+
+#navbar-list a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 2rem 1rem;
+}
+
+#navbar-list a:hover {
+  color: var(--primary);
+  background-color: #fff;
+}
+
+.logout {
+  background-color: var(--primary);
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  position: absolute;
+  top: 1.8rem;
+  right: 1.5rem;
+}
+
+.logout:hover {
+  color: red;
+}

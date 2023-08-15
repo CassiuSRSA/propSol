@@ -1,0 +1,38 @@
+<%- include('includes/head.ejs', {title: 'Admin'}) %>
+<link rel="stylesheet" href="/styles/admin.css">
+  
+  </head>
+  <body>
+    <%- include('includes/header.ejs') %>
+    <main>
+    
+    <h1>Admin Page</h1>
+    </main>
+    <hr>
+    <section class="admin-section">
+   
+      
+      <h2 class="admin-heading">Capture Configuration</h2>
+      
+      <div class="form-control">
+      <form action="/categories/add" method="POST">
+        <label for="add-category">Add Category</label>
+        <input type="text" id="add-category" name="add-category">
+        <button class="btn" type="submit">Add Category</button>
+      </form>
+      <form action="/categories/delete" method="POST">
+        <label class="heading" for="delete-category">Delete Category</label>
+        <select name="delete-category" id="delete-category">
+          <% for (const category of categories) { %>
+            <option value="<%= category.htmlValue %>"><%= category.title %></option>
+            <% } %>
+        </select>
+        <button class="btn btn-delete" type="submit">Delete Category</button>
+      </form>
+    </div>
+      
+    </section>
+   
+    
+  </body>
+</html>
