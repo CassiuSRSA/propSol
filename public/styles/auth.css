@@ -24,3 +24,9 @@ select {
 .form-end {
   margin: 1rem;
 }
+
+#input-error {
+  background-color: rgb(255, 124, 124);
+  border-radius: 5px;
+  padding: 1px 5px;
+}
