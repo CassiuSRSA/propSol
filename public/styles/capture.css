@@ -1,5 +1,6 @@
 .form-container {
   text-align: center;
+  height: 50%;
 }
 
 .capture-flex-container {
@@ -16,7 +17,7 @@
 }
 
 .history h2 {
-  margin: 1rem 0;
+  margin: 1rem 0 0 0;
 }
 
 .transaction-capture-list {
