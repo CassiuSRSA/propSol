@@ -1,3 +1,12 @@
+.form-container {
+  text-align: center;
+}
+
+.capture-flex-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .history {
   display: flex;
   justify-content: center;
@@ -27,4 +36,15 @@
 
 .table-heading {
   font-weight: bold;
+}
+
+@media only screen and (max-width: 720px) {
+  .capture-flex-container {
+    flex-direction: column;
+
+    align-items: center;
+  }
+  .form-container {
+    max-width: 80%;
+  }
 }
