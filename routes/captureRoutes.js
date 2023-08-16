@@ -46,6 +46,7 @@ router.get("/capture", async (req, res) => {
     transactions: lastThreeTransactions,
     categories: categories,
     date: date,
+    page_name: "capture",
   });
 });
 

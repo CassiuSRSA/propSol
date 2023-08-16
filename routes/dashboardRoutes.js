@@ -87,6 +87,7 @@ router.get("/dashboard", async (req, res) => {
     income: income,
     expenses: expenses,
     trendlineData: trendlineData,
+    page_name: "dashboard",
   });
 });
 

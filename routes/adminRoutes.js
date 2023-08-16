@@ -23,10 +23,10 @@ router.get("/admin", async (req, res) => {
     .sort({ title: 1 })
     .toArray();
 
-  res.render("admin", { categories: categories });
+  res.render("admin", { categories: categories, page_name: "admin" });
 });
 
-//////////////////// ADD CATEGORY GET  ////////////////////
+//////////////////// ADD CATEGORY POST  ////////////////////
 
 router.post("/categories/add", async (req, res) => {
   const enteredCategory = req.body["add-category"];
@@ -39,7 +39,7 @@ router.post("/categories/add", async (req, res) => {
   res.redirect("/admin");
 });
 
-//////////////////// DELETE CATEGORY GET  ////////////////////
+//////////////////// DELETE CATEGORY POST  ////////////////////
 
 router.post("/categories/delete", async (req, res) => {
   const enteredCategory = req.body["delete-category"];

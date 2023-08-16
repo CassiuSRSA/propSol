@@ -43,6 +43,16 @@
   cursor: pointer;
 }
 
+#navbar-list .current a {
+  background: #fff;
+  color: var(--primary);
+}
+
+#navbar-list .current a:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
 @media only screen and (max-width: 600px) {
   #navbar-list {
     justify-content: flex-start;
