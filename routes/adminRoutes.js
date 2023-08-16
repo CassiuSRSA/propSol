@@ -30,7 +30,7 @@ router.get("/admin", async (req, res) => {
 
 router.post("/categories/add", async (req, res) => {
   const enteredCategory = req.body["add-category"];
-  const htmlReady = enteredCategory.toLowerCase().trim().replace(" ", "-");
+  const htmlReady = enteredCategory.toLowerCase().trim().replaceAll(" ", "-");
 
   await db
     .getDb()
