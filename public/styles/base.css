@@ -24,7 +24,11 @@ main {
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 0 5rem;
+  margin: 0 3rem;
+}
+
+#welcome {
+  margin: 2rem 3rem;
 }
 
 .welcome-details {
