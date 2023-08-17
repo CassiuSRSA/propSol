@@ -61,7 +61,7 @@
 .hamburger {
   display: none;
   position: absolute;
-  top: 1rem;
+  top: 2rem;
   right: 1rem;
   color: #000;
   cursor: pointer;
@@ -91,6 +91,6 @@
   }
 }
 
-.show {
+#navbar.show {
   transform: translateY(0);
 }
