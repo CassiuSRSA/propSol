@@ -9,11 +9,11 @@ const router = express.Router();
 router.get("/admin", async (req, res) => {
   if (!res.locals.isAuth) {
     // if (!req.session.user)
-    return res.status(401).render("401");
+    return res.status(401).render("401", { page_name: "" });
   }
 
   if (!res.locals.isAdmin) {
-    return res.status(403).render("403");
+    return res.status(403).render("403", { page_name: "" });
   }
 
   const categories = await db

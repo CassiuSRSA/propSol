@@ -9,7 +9,7 @@ const router = express.Router();
 router.get("/capture", async (req, res) => {
   if (!res.locals.isAuth) {
     // if (!req.session.user)
-    return res.status(401).render("401");
+    return res.status(401).render("401", { page_name: "" });
   }
 
   const dateFormater = (date, separator) => {

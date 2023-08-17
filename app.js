@@ -80,7 +80,7 @@ app.use(authRoutes);
 
 // CATCH ALL ERROR HANDLER
 app.use((error, req, res, next) => {
-  res.render("500");
+  res.render("500", { page_name: "" });
 });
 
 // INITIATE SERVER UPON DATABASE CONNECTION

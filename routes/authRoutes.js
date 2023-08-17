@@ -166,10 +166,10 @@ router.post("/logout", (req, res) => {
 });
 
 router.get("*", (req, res) => {
-  res.render("404");
+  res.render("404", { page_name: "" });
 });
 
 router.post("*", (req, res) => {
-  res.render("404");
+  res.render("404", { page_name: "" });
 });
 module.exports = router;

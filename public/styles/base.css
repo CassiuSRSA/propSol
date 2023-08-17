@@ -66,3 +66,7 @@ main {
 .btn-delete:hover {
   background-color: rgb(255, 31, 31);
 }
+
+.error-page {
+  height: 50vh;
+}
