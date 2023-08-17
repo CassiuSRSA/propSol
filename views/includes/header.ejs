@@ -1,5 +1,7 @@
 <header>
+  
   <nav id="navbar">
+    <h2>prop<span class="logo-span">Sol</span></h2>
     <ul id="navbar-list">
       <% if (locals.isAdmin) { %>
         <li            
@@ -9,15 +11,15 @@
             class="nav-link"
             <% } %> >
         <a href="/dashboard">Dashboard</a>
-    </li>
-      <li            
+        </li>
+         <li            
     <% if (page_name === 'admin') { %>
         class="nav-link current"
         <%} else { %>
         class="nav-link"
         <% } %> >
     <a href="/admin">Admin</a>
-</li>
+      </li>
       <% } %>
       <% if (!locals.isAuth) { %>
       <li><a href="/login" class="nav-link">Login</a></li>
@@ -30,14 +32,16 @@
         class="nav-link"
         <% } %> >
     <a href="/capture">Capture</a>
-</li>
-        <li>
-          <form action="/logout" method="POST">
-            <button class="logout"><i class="fa-solid fa-power-off"></i></button>
-          </form>
         </li>
-        <% } %>
-      
+        <li>
+          
+        </li>
+        <% } %> 
     </ul>
+    <form action="/logout" method="POST">
+      <button class="logout"><i class="fa-solid fa-power-off"></i></button>
+    </form>
+    
   </nav>
+  <div class="hamburger"><i class="fa-solid fa-bars fa-2x"></i></div>
 </header>
