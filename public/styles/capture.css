@@ -22,6 +22,7 @@
 }
 
 .transaction-capture-list {
+  box-shadow: 0px 0px 15px -7px rgba(0, 0, 0, 0.75);
   list-style: none;
 }
 
